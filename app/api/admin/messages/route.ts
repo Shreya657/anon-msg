@@ -15,6 +15,7 @@ export async function POST(request:NextRequest){
         })
         return NextResponse.json({message,msg:"message sent successfully"})
     }catch(err){
+      console.error("culprit: ",err);
         return NextResponse.json({error:"something went wrong"},{status:500})
     }
 }
